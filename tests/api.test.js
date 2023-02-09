@@ -18,7 +18,7 @@ test("GET /api/register", async () => {
     const payload = {
         firstname: 'firstname',
         lastname: 'lastname',
-        email: 'test123@email.com',
+        email: 'xxx@email.com',
         password: 'password'
     }
     await supertest(app).post("/api/register").send(payload)
@@ -36,7 +36,7 @@ test("GET /api/register", async () => {
 
 test("GET /api/login", async () => {
     const payload = {
-        email: 'test123@email.com',
+        email: 'xxx@email.com',
         password: 'password'
     }
     await supertest(app).post("/api/login").send(payload)
