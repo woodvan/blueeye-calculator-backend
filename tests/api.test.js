@@ -94,7 +94,7 @@ test("POST /api/request", async () => {
 test("GET /api/records", async () => {
     const token = await getJWTToken();
     await supertest(app)
-        .get("/api/records")
+        .post("/api/records")
         .set({ Authorization: `Bearer ${token}` })
         .send()
         .expect(200)
